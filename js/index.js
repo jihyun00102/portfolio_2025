@@ -102,11 +102,11 @@ $(function(){
 // work popup layer
 const body = document.querySelector('body');
 let workList = [
-    ["서강대학교 리뉴얼","기여도 100%", "https://prism.sogang.ac.kr/", "sogang", "메인 및 서브페이지 리뉴얼 퍼블리싱 작업"],
-    ["부산공유대학 리뉴얼","기여도 80%", "https://www.bbits.ac.kr/", "bbits", "메인 페이지 리뉴얼 퍼블리싱"],
-    ["가톨릭성서모임","기여도 100%", "https://www.biblemove.com/", "biblemove", "메인 및 서브페이지 퍼블리싱과 PHP를 활용한 위젯 개발"],
-    ["한국화학융합시험연구원 리뉴얼","기여도 100%", "https://hrd.ktr.or.kr/", "ktr", "메인 및 서브페이지 리뉴얼 퍼블리싱과 자바스크립트를 사용한 배너 제작"],
-    ["JST 공유대학 리뉴얼","기여도 100%", "https://jb.jst.ac.kr/", "jst", "메인페이지를 풀페이지로 리뉴얼"]
+    ["서강대학교 리뉴얼","기여도 100%", "https://prism.sogang.ac.kr/", "../image/work/sogang.png", "메인 및 서브페이지 리뉴얼 퍼블리싱 작업"],
+    ["부산공유대학 리뉴얼","기여도 80%", "https://www.bbits.ac.kr/", "../image/work/bbits.png", "메인 페이지 리뉴얼 퍼블리싱"],
+    ["가톨릭성서모임","기여도 100%", "https://www.biblemove.com/", "../image/work/biblemove.png", "메인 및 서브페이지 퍼블리싱과 PHP를 활용한 위젯 개발"],
+    ["한국화학융합시험연구원 리뉴얼","기여도 100%", "https://hrd.ktr.or.kr/", "../image/work/ktr.png", "메인 및 서브페이지 리뉴얼 퍼블리싱과 자바스크립트를 사용한 배너 제작"],
+    ["JST 공유대학 리뉴얼","기여도 100%", "https://jb.jst.ac.kr/", "../image/work/jst.png", "메인페이지를 풀페이지로 리뉴얼"]
 ];
 
 function openPopup($widx) {
@@ -126,7 +126,7 @@ function openPopup($widx) {
                 </div>
                 <div class="layer_bottom">
                     <p>${workList[$widx][4]}</p>
-                    <img src="../image/work/${workList[$widx][3]}.png" alt="">
+                    <img src="${workList[$widx][3]}" alt="사이트">
                 </div>
             </div>  
         </div>
