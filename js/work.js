@@ -21,6 +21,6 @@ $(function() {
     $(".cont_list > li").each(function () {
         const site = $(this).data('site');
         
-        $(this).css('background-image', `url(../image/work/${site}.png)`);
+        $(this).css('background-image', `url(./image/work/${site}.png)`);
     });
 });
