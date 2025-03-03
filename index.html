@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./image/favicon/favicon.ico">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="./style/common.css">
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./slick/slick.css">
+    <link rel="stylesheet" href="./slick/slick-theme.css">
+</head>
+<body>
+    <div id="header"></div>
+
+    <section class="intro">
+        <div class="wrap">
+            <div class="intro_tit">
+                <svg class="tit__front" width="1292" height="464" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1216.5 463.5"><defs><style>.cls-1{fill:#ffa137;}</style></defs><g id="tit__front" data-name="레이어 2"><g id="레이어_1-2" data-name="레이어 1"><path class="cls-1" d="M984.75,0A231.45,231.45,0,0,0,796.5,96.57a231.77,231.77,0,0,0-376.5,0A231.45,231.45,0,0,0,231.75,0C103.76,0,0,103.76,0,231.75S103.76,463.5,231.75,463.5A231.45,231.45,0,0,0,420,366.93a231.77,231.77,0,0,0,376.5,0A231.45,231.45,0,0,0,984.75,463.5c128,0,231.75-103.76,231.75-231.75S1112.74,0,984.75,0Z"/></g></g></svg>
+                <svg class="tit__back" width="1292" height="464" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1216.5 463.5"><defs><style>.cls-2{fill: #fff6eb;}</style></defs><g id="tit__back" data-name="레이어 2"><g id="레이어_1-2" data-name="레이어 1"><path class="cls-2" d="M984.75,0A231.45,231.45,0,0,0,796.5,96.57a231.77,231.77,0,0,0-376.5,0A231.45,231.45,0,0,0,231.75,0C103.76,0,0,103.76,0,231.75S103.76,463.5,231.75,463.5A231.45,231.45,0,0,0,420,366.93a231.77,231.77,0,0,0,376.5,0A231.45,231.45,0,0,0,984.75,463.5c128,0,231.75-103.76,231.75-231.75S1112.74,0,984.75,0Z"/></g></g></svg>
+                <h2 data-splitting class="f_intro">PORTFOLIO</h2>  
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="wrap">
+            <div class="flexcontainer">
+                <div class="about_img"></div>
+                <div class="about_txt">
+                    <div class="txt__top">
+                        <div class="top_tit">
+                            <h2>BE A WISE</h2>
+                            <br>
+                            <h2>BE A BRIGHT</h2>
+                        </div>
+                        <div class="ex f_ko">
+                            현명하고 밝은 사람이라는 이름의 뜻처럼 
+                            저는 어려운 상황에서도 긍정적인 마인드를 유지하며, 
+                            문제 해결을 위한 창의적인 접근 방식을 중요하게 생각합니다.
+                            또한, 지속적인 자기 개발을 통해 전문성을 강화하고,
+                            변화하는 환경에 적응하여 더 큰 성과를 이루어 나가고자 합니다.
+                        </div>
+                    </div>
+
+                    <div class="txt__bottom">
+                        <ul class="work">
+                            <li class="bottom_tit">WORK EXPERIENCE</li>
+                            <li class="f_ko">(주) 와이오즈 2022. 08 ~ 2024. 11</li>
+                        </ul>
+
+                        <ul class="edu">
+                            <li class="bottom_tit">EDUCATION</li>
+                            <li class="f_ko">하이미디어 아카데미 - UI/UX 적응형반응형 웹디자인&웹퍼블리셔B 수료</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="triangle"></div>
+    </section>
+
+    <section class="skills">
+        <div class="wrap">
+            <div class="sub">SKILLS</div>
+            <ul class="list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JAVASCRIPT</li>
+                <li>JQUERY</li>
+                <li>PHP</li>
+                <li>PHOTOSHOP</li>
+                <li>FIGMA</li>
+            </ul>
+        </div>
+    </section>
+    
+    <section class="work">
+        <div class="wrap">
+            <div class="work__top">
+                <div class="sub">WORK</div>
+                <a class="more" href="./work.html">VIEW MORE</a>
+            </div>
+            <ul class="slide">
+                <li data-work="sogang">
+                    <a href='javascript:void(0);' onClick='openPopup(0); return false;'>
+                        <div class="thumbnail"></div>
+                        <div class="inform f_ko">
+                            <h4>서강대학교 리뉴얼</h4>
+                            <p>퍼블리싱 기여도 - 100%</p>
+                        </div>
+                    </a>
+                </li>
+                <li data-work="bbits">
+                    <a href='javascript:void(0);' onClick='openPopup(1); return false;'>
+                        <div class="thumbnail"></div>
+                        <div class="inform f_ko">
+                            <h4>부산공유대학 리뉴얼</h4>
+                            <p>퍼블리싱 기여도 - 80%</p>
+                        </div>
+                    </a>
+                </li>
+                <li data-work="bible">
+                    <a href='javascript:void(0);' onClick='openPopup(2); return false;'>
+                        <div class="thumbnail"></div>
+                        <div class="inform f_ko">
+                            <h4>가톨릭성서모임</h4>
+                            <p>퍼블리싱 기여도 - 100%</p>
+                        </div>
+                    </a>
+                </li>
+                <li data-work="ktr">
+                    <a href='javascript:void(0);' onClick='openPopup(3); return false;'>
+                        <div class="thumbnail"></div>
+                        <div class="inform f_ko">
+                            <h4>한국화학융합시험연구원 리뉴얼</h4>
+                            <p>퍼블리싱 기여도 - 100%</p>
+                        </div>
+                    </a>
+                </li>
+                <li data-work="jst">
+                    <a href='javascript:void(0);' onClick='openPopup(4); return false;'>
+                        <div class="thumbnail"></div>
+                        <div class="inform f_ko">
+                            <h4>JST 공유대학 리뉴얼</h4>
+                            <p>퍼블리싱 기여도 - 100%</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    
+    <section class="move_keyword">
+        <div class="keyword_top"></div>
+        <div class="keyword_bottom"></div>
+    </section>
+    
+    <footer>
+        <div class="wrap">
+            <h2>
+                <span>
+                    STRATEGIC THINKING <br>
+                    PLEASANT COOPERATION <br>
+                    AND A NEW BEGINING <br>
+                </span>
+                <strong class="ko f_ko">젊은 감각과 색다른 시선으로 시작될 새로운 여정에 함께하고 싶습니다.</strong>
+            </h2>
+        </div>
+    </footer>
+
+    <div class="cursor"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+    <script src="./js/plugin/splitting.min.js"></script>
+    <script src="./js/plugin/scrolla.jquery.min.js"></script>
+    <script src="./slick/slick.js"></script>
+    <script src="./js/index.js" defer></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

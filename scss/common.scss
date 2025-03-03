@@ -1,0 +1,302 @@
+/* 인코딩 */
+@charset "utf-8";
+
+// font
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Noto+Sans+KR:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --org: #ffa137;
+    --point: #ff5900;
+    --sub-color: #ffd09b;
+    --background: #fff6eb;
+    --font-color: #454545;
+
+    // gsap interaction
+    --sub2_after-width: 0;
+    --about-tit-width: 0;
+    --intro-arrow-opacity: 0;
+    --thanks-tit-width: 0;
+}
+
+$breakpoint-sm-tablet: 768px;
+$breakpoint-mid-tablet: 991px;
+$breakpoint-big-tablet: 1024px;
+$breakpoint-desktop: 1200px;
+$breakpoint-desktop-large: 1440px;
+
+
+@mixin gnb_btn {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--font-color);
+    transition: all .3s;
+    @content;
+}
+
+@mixin gnb_btn_on($rotate, $translateX, $translateY) {
+    transform: rotate($rotate) translate($translateX, $translateY);
+    background-color: #fff;
+}
+
+@mixin sub_font_style {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--font-color);
+    @content;
+}
+
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a{text-decoration: none;}
+.org {color: var(--org);}
+
+
+body {
+    font-family: "Poppins", serif;
+
+    &.disabled {
+        overflow: hidden;
+    }
+
+    .cursor {
+        width: 3rem;
+        height: 3rem;
+        background-color: var(--org);
+        border-radius: 50%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    .f_intro {
+        font-family: "Kantumruy Pro", serif;
+    }
+    
+    .f_ko {
+        font-family: "Noto Sans KR", serif;
+    }
+}
+
+.wrap {
+    padding: 0 10px;
+
+    @media (min-width: $breakpoint-sm-tablet) {
+        width: 740px;
+        margin: 0 auto;
+    }
+
+    @media (min-width: $breakpoint-mid-tablet) {
+        width: 960px;
+        margin: 0 auto;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+        width: 1100px;
+        margin: 0 auto;
+    }
+
+    @media (min-width: $breakpoint-desktop-large) {
+        width: 1420px;
+        margin: 0 auto;
+    }    
+}
+
+.flexcontainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.sub {
+    @include sub_font_style;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 6px;
+        right: -10px;
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: var(--org);
+        opacity: 0.5;
+    }
+}
+
+.sub2 {
+    @include sub_font_style;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%; 
+        right: -10px;
+        display: inline-block;
+        background-color: var(--org);
+        width: var(--sub2_after-width);
+        height: 20px;
+        z-index: -1;
+    }
+}
+
+.sub3 {
+    @include sub_font_style;
+    font-size: 20px;
+    display: none;
+
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0; 
+        right: -10px;
+        display: inline-block;
+        background-color: var(--point);
+        width: 5px;
+        height: 5px;
+    }
+}
+
+.tit__center {
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    position: fixed;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, .5);
+    transition: transform .5s;
+    z-index: 100;
+    
+
+    &.active {
+        transform: translateY(-100%);
+    }
+
+    .gnb {
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 30px;
+
+            li {
+                a{
+                    display: inline-block;
+                    padding: 23px 0;
+                    color: var(--font-color);
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    &.on {
+        .gnb_btn .btn_box .btn_box__top {
+            @include gnb_btn_on(45deg, 5px, 5px);
+        }
+
+        .gnb_btn .btn_box .btn_box__bottom {
+            @include gnb_btn_on(-45deg, 2px,-1px);
+        }
+    }
+}
+
+// responsive
+@media (max-width: $breakpoint-mid-tablet) {
+    header {
+        .wrap {
+            width: 100%;
+
+            .gnb {
+                position: fixed;
+                top: -100%;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: var(--font-color);
+                transition: top 1s;
+                
+                ul {
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+    
+                    li {
+                        a {
+                            text-align: center;
+                            font-size: 7vw;
+                            color: #fff;
+    
+                            .br {
+                                display: block;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+
+        .gnb_btn {
+            position: fixed;
+            top: 8px;
+            right: 9.1875vw;
+            width: 32px;
+            height: 32px;
+            padding: 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 101;
+
+
+            .btn_box {
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+                display: block;
+                height: 10px;
+
+                .btn_box__top {
+                    @include gnb_btn;
+                    top: 0;
+                }
+
+                .btn_box__bottom {
+                    @include gnb_btn;
+                    bottom: 0;
+                }
+            }
+        }
+
+        &.on {
+            .gnb {
+                top: 0;
+            }
+        }
+    }
+}
+
+@media (max-width:1023px) {
+    .cursor {
+        display: none;
+    }
+}
+
+@media (max-width:768px) {
+    header .gnb_btn {
+        right: 1.1875vw;
+    }
+}
